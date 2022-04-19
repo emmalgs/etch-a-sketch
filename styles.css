@@ -1,7 +1,14 @@
+* {
+    background-color: lavender;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: coral;
     padding: 10px;
+}
+
+.squares {
+    background-color: red;
 }
 
