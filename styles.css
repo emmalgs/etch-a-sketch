@@ -3,12 +3,17 @@
 }
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
     background-color: coral;
     padding: 10px;
 }
 
 .squares {
+    height: auto;
+    width: 200px;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
     background-color: red;
 }
 
