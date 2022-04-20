@@ -2,13 +2,8 @@ const container = document.querySelector('.grid-container');
 const clearGrid = document.querySelector('#clearGrid');
 const gridValue = document.querySelector('.gridValue');
 
-
-let gridSize = document.getElementById('gridSize').value;
-
-
-
-
-
+const gridInput = document.getElementById('gridSize').value;
+let gridSize = gridInput;
 gridValue.textContent = `${gridSize} x ${gridSize}`;
 
 clearGrid.addEventListener('click', () => {
@@ -18,6 +13,7 @@ clearGrid.addEventListener('click', () => {
 });
 
 function createGrid() {
+
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows= `repeat(${gridSize}, 1fr)`;
     for (let i=0; i < gridSize * gridSize; i++) {

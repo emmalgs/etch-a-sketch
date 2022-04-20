@@ -17,17 +17,19 @@ body {
     background-color: lavender;
     font-family:'Roboto Mono', monospace;
     margin-bottom: 100px;
-    grid-template-columns: 150px 1fr 1fr;
+    grid-template-columns: 1fr 150px 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header header header"
-    "sidebar . sketchpad";
+    "header header header header"
+    ". sidebar sketchpad .";
 }
 
 header {
     margin: 40px;
     padding: 18px;
     font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 32px;
     grid-area: header;
 }
 
@@ -38,6 +40,7 @@ header {
     align-items: center;
     justify-items: center;
     grid-area: sidebar;
+    gap: 8px;
 }
 
 .grid-container {
@@ -58,6 +61,7 @@ button {
     text-align: center;
     border-radius: 8px;
 }
+
 
 .gridValue {
     padding: 18px;
