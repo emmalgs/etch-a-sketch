@@ -1,14 +1,10 @@
 const container = document.querySelector('.grid-container');
 const clearGrid = document.querySelector('#clearGrid');
 
-function newGrid(value) {
-    let newSize = Number(prompt(`What size would you like your sketch to be?`));
-    if (newSize > 100) {
-        return `Enter a number less than 100`;
-    }
-}
+let gridSize = Number(prompt(`What size would you like your sketch to be?`, ``))
 
-console.log(newGrid())
+const gridValue = document.querySelector('.gridValue');
+gridValue.textContent = `${gridSize} x ${gridSize}`;
 
 clearGrid.addEventListener('click', () => {
     window.setTimeout(() => {
@@ -16,7 +12,7 @@ clearGrid.addEventListener('click', () => {
     }, 200);
 });
 
-function createGrid(gridSize) {
+function createGrid() {
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows= `repeat(${gridSize}, 1fr)`;
     for (let i=0; i < gridSize * gridSize; i++) {
