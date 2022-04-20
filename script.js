@@ -1,9 +1,14 @@
 const container = document.querySelector('.grid-container');
 const clearGrid = document.querySelector('#clearGrid');
-
-let gridSize = Number(prompt(`What size would you like your sketch to be?`, ``))
-
 const gridValue = document.querySelector('.gridValue');
+
+
+let gridSize = document.getElementById('gridSize').value;
+
+
+
+
+
 gridValue.textContent = `${gridSize} x ${gridSize}`;
 
 clearGrid.addEventListener('click', () => {
