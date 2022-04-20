@@ -1,19 +1,36 @@
 * {
     background-color: lavender;
 }
+.body {
+    display: grid;
+    grid-template-columns: 50px 25px 300px 25px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar . main . ";
+}
 .grid-container {
     display: grid;
     background-color: coral;
     padding: 10px;
+    grid-area: main;
 }
-
-.squares {
-    height: auto;
-    width: 200px;
-    display: flex;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
+.grid-container > div {
+    padding: 20px;
     background-color: red;
 }
+
+#clearGrid {
+    font-style: Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: yellow;
+    color: royalblue;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid red;
+    border-radius: 8px;
+    grid-area: sidebar;
+}
+
 
