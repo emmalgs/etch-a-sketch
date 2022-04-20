@@ -15,6 +15,11 @@ body {
     background-color: lavender;
     font-family:'Courier New', Courier, monospace;
     margin-bottom: 100px;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "sidebar . sketchpad";
 }
 
 header {
@@ -24,6 +29,11 @@ header {
 }
 
 .sidebar {
+    display: grid;
+    padding: 18px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
     grid-area: sidebar;
 }
 
@@ -35,16 +45,18 @@ header {
     background-color: coral;
     padding: 10px;
     margin: 20px;
+    grid-area: sketchpad
 }
 
 button {
     font-family: inherit;
     font-weight: bold;
-    background-color: yellow;
     padding: 8px 12px;
     text-align: center;
-    border: 2px solid red;
     border-radius: 8px;
 }
 
+.gridValue {
+    padding: 18px;
+}
 
