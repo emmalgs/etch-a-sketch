@@ -1,5 +1,13 @@
 const container = document.querySelector('.grid-container');
+const clearGrid = document.querySelector('#clearGrid');
+
 let gridSize = 16;
+
+clearGrid.addEventListener('click', () => {
+    window.setTimeout(() => {
+        window.location.reload(true);
+    }, 200);
+});
 
 function createGrid() {
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;

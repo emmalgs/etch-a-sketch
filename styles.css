@@ -1,18 +1,18 @@
 * {
     background-color: lavender;
+
 }
-.body {
-    display: grid;
-    grid-template-columns: 50px 25px 300px 25px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "sidebar . main . ";
+
+#body {
+    display: flex;
 }
+
 .grid-container {
     display: grid;
+    justify-content: center;
+    align-items: center;
     background-color: coral;
     padding: 10px;
-    grid-area: main;
 }
 .grid-container > div {
     padding: 20px;
@@ -30,7 +30,10 @@
     display: inline-block;
     border: 2px solid red;
     border-radius: 8px;
-    grid-area: sidebar;
+    align-self: auto;
+    justify-content: center;
+    flex: none;
+    
 }
 
 
