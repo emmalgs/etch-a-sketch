@@ -6,11 +6,8 @@ document.querySelector('#submit').addEventListener('click', function(event) {
     gridSize = document.getElementById('gridInput').value
     createGrid(gridSize);
     gridValue.textContent = `${gridSize} x ${gridSize}`;
-    event.preventDefault();
-    
+    event.preventDefault();    
 })
-
-
 
 clearGrid.addEventListener('click', () => {
     window.setTimeout(() => {
